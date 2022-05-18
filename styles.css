@@ -1,0 +1,142 @@
+@import url('https://fonts.google.com/specimen/Outfit');
+:root{
+    /* Primary_colors */
+--Soft_blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--Cyan_secondary: hsl(178, 80%, 40%);
+
+
+/* Neutral colors */
+--Very_dark_blue_main_BG: hsl(217, 54%, 11%);
+--Very_dark_blue_card_BG: hsl(216, 50%, 16%);
+--Very_dark_blue_line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{scroll-behavior: smooth;}
+body{
+    background-color: var(--Very_dark_blue_main_BG);
+    font-size: 1.125rem;
+    max-height: 90vh;
+    padding: 2rem 1.2rem;
+}
+main{
+    max-height: 100%;
+    background-color: var(--Very_dark_blue_card_BG);
+    border-radius: 0.625rem;
+    padding: 1.4rem;
+}
+.equilibrium_image_container{
+    position: relative;
+    border-radius: 0.5125rem;
+    background-color:var(--Cyan_secondary);
+
+}
+.equilibrium_image{
+    display: block;
+    width: 100%;
+    border-radius: 0.5125rem;
+}
+.icon{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+opacity: 0;
+}
+.equilibrium_image_container:hover .equilibrium_image{
+    mix-blend-mode:screen;
+}
+.equilibrium_image_container:hover .icon{
+    opacity: 1;
+}
+.equilibrium_heading{
+    font-family: 'Outfit',serif;
+    font-weight: 600;
+    color: var(--White);
+}
+.equilibrium_review{
+    color: var(--Soft_blue);
+}
+.eth_gain{
+    position: relative;
+    font-family:'Outfit',serif;
+    font-weight: 400;
+    color: var(--Cyan);
+    margin-left: 1.5rem;
+}
+.eth_gain::before{
+    position: absolute;
+    content: url('/image/icon-ethereum.svg');
+    top: 10%;
+    left: -30%;    
+}
+.days_left{
+    position: relative;
+    
+    color: var(--Soft_blue);
+}
+.days_left::before{
+    position: absolute;
+    top: 10%;
+    left: -30%;
+    content: url('/image/icon-clock.svg');
+margin-right: 0.5rem;
+}
+.eth{
+    display: flex;
+    justify-content: space-between;
+}
+hr {
+   color:var(--Very_dark_blue_line);
+}
+.profile{
+    position: relative;
+}
+.avator{
+    width: 13%;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+.name{
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    color: var(--Soft_blue);
+}
+.name span{
+    color: var(--White)
+}
+.equilibrium_heading,
+.equilibrium_review,
+.eth,hr,
+.avator{
+    margin-bottom: 1.5rem;
+}
+.equilibrium_heading:hover,
+.name span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: .5s ease-out;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (min-width:480px) {
+    body{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 0 480px;
+    }
+    .avator{
+        width: 12%;
+    }
+    
+}
