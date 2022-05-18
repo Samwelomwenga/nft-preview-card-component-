@@ -85,7 +85,7 @@ opacity: 0;
     position: absolute;
     top: 10%;
     left: -30%;
-    content: url('/image/icon-clock.svg');
+    content: url('image/icon-clock.svg');
 margin-right: 0.5rem;
 }
 .eth{
