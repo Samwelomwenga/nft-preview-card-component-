@@ -72,7 +72,7 @@ opacity: 0;
 }
 .eth_gain::before{
     position: absolute;
-    content: url('/image/icon-ethereum.svg');
+    content: url('image/icon-ethereum.svg');
     top: 10%;
     left: -30%;    
 }
